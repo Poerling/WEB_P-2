@@ -61,3 +61,20 @@ nav ul ul ul li {
   top: -60px;
   left: 170px;
 }
+
+div#cookieHinweis {
+	display: block;
+	z-index: 100;
+	position: fixed;
+	bottom: 0px;
+	min-height: 5%;
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	color: #555;
+	border: 1px solid black;
+	border-bottom: none;
+	background: #fff;
+}
+

@@ -43,4 +43,21 @@ TODO:
 
 	
 </body>
+
+<footer>	
+	<script language="javascript">
+	function setzeCookie() {
+	var datum = new Date();
+	var jetzigeZeit = datum.getTime();
+	var gueltigBis = jetzigeZeit + 86400;
+	datum.setTime(gueltigBis);
+	var EnddatumString = datum.toUTCString();
+	document.cookie = "Minziro = set;expires=" + EnddatumString;
+	document.getElementById("cookieHinweis").style.display = "none";
+	}
+</script>
+<div id="cookieHinweis">
+Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erklärst du dich damit einverstanden, dass wir Cookies verwenden <a href="datenschutz.html">Mehr Infos</a> <button onclick='setzeCookie()'>OK</button>
+</div>
+</footer>
 </html>
