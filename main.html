@@ -1,63 +1,89 @@
-<!doctype html>
-<html>
-	<head>
-	<meta charset="utf-8">
-	<title>Minziro Entwicklungsverein e.V. </title>
-	<link rel="stylesheet" href="main.css">
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" lang="de-de">
+    <link rel="stylesheet" href="style.css">
+    <title>Minziro Entwicklungsverein e.V. </title>
+
+
+    <div class="header">
+        <h1>Minziro Entwicklungsverein e.V. </h1>
+        <img class="banner" src="logo.png" alt="Banner">
+    </div>
+
+
 </head>
+
+
 <body>
-<nav>
-	<ul>
-		<li><a href="ueberuns.html">Über uns</a>
-			<ul>
-				<li><a href="satzung.html">Satzung</a></li>
-			</ul>
-		</li>
-		<li><a href="wirhelfen.html">Wir helfen</a>
-			<ul>
-				<li><a href="spenden.html">Spenden</a></li>
-			</ul>
-		</li>
-		<li><a href="aktuelles.html">Aktuelles</a></li>
-		<li><a href="projekte.html">Projekte</a></li>
-		<li><a href="kontakt.html">Kontakt</a>
-			<ul>
-				<li><a href="socialmedia.html">Social Media</a></li>
-				<li><a href="impressum.html">Impressum</a></li>
-				<li><a href="datenschutz.html">Datenschutz</a></li>
-			</ul>
-		</li>
-	</ul>
-	</nav>
-	<h1>Minziro Entwicklungsverein e.V.</h1>
-	<div id="text">
-	<p>Willkommen auf der Website des Minziro Entwicklungsvereins e.V.</br>
-Hier finden Sie Informationen über unseren Verein und natürlich über das Dorf Minziro in Tansania.</br>
-Wir hoffen, Ihnen ausreichende Informationen auf dieser Website zur Verfügung stellen zu können.</br>
-Falls Sie doch noch Fragen haben sollten, schicken Sie einfach eine Email an <span id="mail"><a href="mailto:info(@)minziro.net">info@minziro.net</a></span>.</br>
-Wir werden uns umgehend bei Ihnen melden.</br>
-Wir freuen uns über Ihren Besuch.</p>
-TODO:
-[Hier ist eine Liste (Feeds) der aktuellen Ereignisse, Veranstaltungen etc. zu finden sein, sortiert antichronologisch (d. h., das Neueste zuerst) nach Datum]
-	</div>
-
-	
-</body>
-
-<footer>	
-	<script language="javascript">
-	function setzeCookie() {
-	var datum = new Date();
-	var jetzigeZeit = datum.getTime();
-	var gueltigBis = jetzigeZeit + 86400;
-	datum.setTime(gueltigBis);
-	var EnddatumString = datum.toUTCString();
-	document.cookie = "Minziro = set;expires=" + EnddatumString;
-	document.getElementById("cookieHinweis").style.display = "none";
-	}
-</script>
-<div id="cookieHinweis">
-Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erklärst du dich damit einverstanden, dass wir Cookies verwenden <a href="datenschutz.html">Mehr Infos</a> <button onclick='setzeCookie()'>OK</button>
+<div id="Navigationsmenü">
+<!-- Navigationsmenü -->
+<ul>
+    <li><a href="main.html">Home</a></li>
+    <!-- Navigationsmenü - Dropdown -->
+    <!-- javascript:void(0) -->
+    <li class="dropdown">
+        <a href="ueberuns.html" class="dropbtn">Über uns</a>
+        <div class="dropdown-content">
+            <a href="satzung.html">Satzung</a>
+        </div>
+    </li>
+    <li class="dropdown">
+        <a href="wirhelfen.html" class="dropbtn">Wir helfen</a>
+        <div class="dropdown-content">
+            <a href="spenden.html">Spenden</a>
+        </div>
+    </li>
+    <li><a href="aktuelles.html">Aktuelles</a></li>
+    <li><a href="projekte.html">Projekte</a></li>
+    <li class="dropdown">
+        <a href="kontakt.html" class="dropbtn">Kontakt</a>
+        <div class="dropdown-content">
+            <a href="socialmedia.html">Social Media</a>
+            <a href="impressum.html">Impressum</a>
+            <a href="datenschutz.html">Datenschutz</a>
+        </div>
+    </li>
+</ul>
 </div>
+
+<h1>Minziro Entwicklungsverein e.V.</h1>
+<div id="text">
+    <p>Willkommen auf der Website des Minziro Entwicklungsvereins e.V.</br>
+        Hier finden Sie Informationen über unseren Verein und natürlich über das Dorf Minziro in Tansania.</br>
+        Wir hoffen, Ihnen ausreichende Informationen auf dieser Website zur Verfügung stellen zu können.</br>
+        Falls Sie doch noch Fragen haben sollten, schicken Sie einfach eine Email an <span id="mail"><a href="mailto:info(@)minziro.net">info@minziro.net</a></span>.</br>
+        Wir werden uns umgehend bei Ihnen melden.</br>
+        Wir freuen uns über Ihren Besuch.</br>
+        TODO:</br>
+        [Hier ist eine Liste (Feeds) der aktuellen Ereignisse, Veranstaltungen etc. zu finden sein, sortiert antichronologisch (d. h., das Neueste zuerst) nach Datum]</br></p>
+</div>
+
+
+<p> Text neben dem Banner Text neben dem Banner Text neben dem Banner noch mehr Text noch mehr Text noch mehr Text noch mehr Text
+</p>
+
+</body>
+<footer>
+    <script language="javascript">
+        function setzeCookie() {
+            var datum = new Date();
+            var jetzigeZeit = datum.getTime();
+            var gueltigBis = jetzigeZeit + 86400;
+            datum.setTime(gueltigBis);
+            var EnddatumString = datum.toUTCString();
+            document.cookie = "Minziro = set;expires=" + EnddatumString;
+            document.getElementById("cookieHinweis").style.display = "none";
+        }
+    </script>
+    <div id="cookieHinweis">
+        Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erklärst du dich damit einverstanden, dass wir Cookies verwenden <a href="datenschutz.html">Mehr Infos</a> <button onclick='setzeCookie()'>OK</button>
+    </div>
+
+
+    <div class="footer">
+        <p>©2019 - WEB PÜ2
+        <a href="impressum.html">Impressum</a></p>
+    </div>
 </footer>
 </html>
