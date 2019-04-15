@@ -2,11 +2,13 @@ body {
     font-family: Arial;
 }
 footer {
+    display: block;
+    position: fixed;
+    bottom: 0px;
     background-color: #333;
     padding: 2px;
     text-align: center;
     color: white;
-    bottom: 0;
     width: 100%;
 }
 
