@@ -3,6 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" lang="de-de">
     <link rel="stylesheet" href="style.css">
+	
     <title>Minziro Entwicklungsverein e.V. </title>
 
     <!-- Hier ID verwenden-->
@@ -16,9 +17,17 @@
 
 
 <body>
-<div id="Navigationsmenü">
+<div class="menu" id="navigation">
 <!-- Navigationsmenü -->
 <ul>
+	<li class="burger">
+		<a href="javascript:void(0);" onclick="myFunction()">
+		<div class="burgericon"></div>
+		<div class="burgericon"></div>
+		<div class="burgericon"></div>
+		</a>
+	</li>
+
     <li><a href="main.html">Home</a></li>
     <!-- Navigationsmenü - Dropdown -->
     <!-- javascript:void(0) -->
@@ -75,6 +84,14 @@
             document.cookie = "Minziro = set;expires=" + EnddatumString;
             document.getElementById("cookieHinweis").style.display = "none";
         }
+		function myFunction() {
+			var x = document.getElementById("navigation");
+			if (x.className === "menu") {
+				x.className += " responsive";
+			} else {
+				x.className = "menu";
+			}
+		}
     </script>
     <script src="dateiname.js"></script>
 
