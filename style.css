@@ -29,8 +29,13 @@ footer {
     height: 25%;
 }
 
+
+.menu li.burger {
+	display: none;
+}
+
 .burgericon {
-  display: none;
+  
   width: 35px;
   height: 5px;
   border-radius: 100px;
@@ -93,9 +98,10 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-	.burgericon {
-		display: block;
-	}
+	.menu li.burger {
+	display: block;
+}
+	
 	
 	.menu li, .menu li.dropdown  {
 		display: none;
