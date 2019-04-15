@@ -1,40 +1,36 @@
-'use strict';
-
-function init() {
-    var besuch = zaehlerstand();
-    var ausgabe = document.getElementById('info');
-    ausgabe.innerHTML = besuch;
-}
-
-function wertHolen() {
-    var Wert = "";
-    if (document.cookie) {
-        var Wertstart = document.cookie.indexOf("=") + 1;
-        var Wertende = document.cookie.indexOf(";");
-        if (Wertende == -1) {
-            Wertende = document.cookie.length;
-        }
-        Wert = document.cookie.substring(Wertstart, Wertende);
-    }
-    return Wert;
-}
-
-function wertSetzen(Bezeichner, Wert, Verfall) {
+function setzeCookie(zaehler,zaehlerWert,ablaufTage) {
+    var infoBox = document.getElementById("cookieHinweis");
+    infoBox.style.display = "none";
     var jetzt = new Date();
-    var Auszeit = new Date(jetzt.getTime() + Verfall);
-    document.cookie = Bezeichner + "=" + Wert + "; expires=" + Auszeit.toGMTString() +
-        ";";
+    jetzt.setTime(jetzt.getTime() + (ablaufTage*24*60*60*1000));
+    var laeuftAbAm = "expires=" + jetzt.toGMTString();
+    document.cookie = zaehler + "=" + zaehlerWert + ";" + laeuftAbAm + ";path=/";
 }
 
-function zaehlerstand() {
-    var Verfallszeit = 1000 * 60 * 60 * 24 * 365;
-    var Anzahl = wertHolen();
-    var Zaehler = 0;
-    if (Anzahl != "") {
-        Zaehler = parseInt(Anzahl) || 0;
+function ladeCookie(zaehler) {
+    var name = zaehler + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
     }
-    Zaehler = Zaehler + 1;
-    wertSetzen("Zaehler", Zaehler, Verfallszeit);
-    return (Zaehler);
+    return "";
 }
-window.addEventListener('DOMContentLoaded', init);
+
+function istCookieGesetzt() {
+    var anzahlBesucht=ladeCookie("Zaehler");
+    var infoBox = document.getElementById("cookieHinweis");
+    if (anzahlBesucht=="") {
+        infoBox.style.display = "flex";
+    }
+    else {
+        anzahlBesucht=parseInt(anzahlBesucht)+1;
+        setzeCookie("Zaehler", anzahlBesucht, 30);
+    }
+}

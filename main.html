@@ -11,12 +11,13 @@
         <h1>Minziro Entwicklungsverein e.V. </h1>
         <img class="banner" src="logo.png" alt="Banner">
     </div>
-
+	
+	<script src="cookiebox.js"></script>
 
 </head>
 
 
-<body>
+<body onload="istCookieGesetzt()">
 <div class="menu" id="navigation">
 <!-- Navigationsmenü -->
 <ul>
@@ -74,31 +75,9 @@
 
 </body>
 <footer>
-    <script language="javascript">
-        function setzeCookie() {
-            var datum = new Date();
-            var jetzigeZeit = datum.getTime();
-            var gueltigBis = jetzigeZeit + 86400;
-            datum.setTime(gueltigBis);
-            var EnddatumString = datum.toUTCString();
-            document.cookie = "Minziro = set;expires=" + EnddatumString;
-            document.getElementById("cookieHinweis").style.display = "none";
-        }
-		function myFunction() {
-			var x = document.getElementById("navigation");
-			if (x.className === "menu") {
-				x.className += " responsive";
-			} else {
-				x.className = "menu";
-			}
-		}
-    </script>
-    <script src="dateiname.js"></script>
-
-
+<footer>
     <div id="cookieHinweis">
-        Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erklärst du dich damit einverstanden, dass wir Cookies verwenden <a href="datenschutz.html">Mehr Infos</a> <button onclick='init()'>OK</button>
-        <script src="cookiebox.js"></script>
+        Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erklärst du dich damit einverstanden, dass wir Cookies verwenden <a href="datenschutz.html">Mehr Infos</a> <button onclick="setzeCookie('Zaehler', 1, 30)">OK</button>
     </div>
 
     <!-- Hier ID verwenden -->
