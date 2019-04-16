@@ -1,59 +1,101 @@
 body {
     font-family: Arial;
+    overflow: auto;
+    background: #f1f1f1;
+    z-index: 9;
+    margin-top: 20px;
 }
-footer {
-position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #222222;
-    color: white;
+.footer {
+
     text-align: center;
-
-
-    display: inline-block;
-
-    padding: 0;
+    background-color: rgba(51,51,51,0.8);
+    position: absolute;
+    width: 100%;
+    color: white;
+    z-index: 1;
+    margin-top: 55%;
+    left:0;
 }
 
 .header {
+    position: fixed;
+    background-color: rgba(250,250,250,0.9);
+    left: 0;
+    padding: 30px;
+    height: 30px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    top: 0;
     width: 100%;
-    display: inline-block;
-    padding: 0;
-    text-align: right;
-    background: #222222;
-    color: white;
-    font-size: 20px;
+    transition: 0.2s;
+    z-index: 1;
 }
-
-
-.header img {
+.Inhalt{
+    margin-top: 90px;
+}
+.linkeSeite {
+    position: absolute;
     float: left;
-    width: 25%;
-    height: 25%;
+    width: 70%;
+    z-index: 3;
+}
+
+.rechteSeite {
+    position: absolute;
+    float: left;
+    width: 20%;
+    background-color: #f1f1f1;
+    margin-left: 71%;
+    z-index: 3;
+}
+
+.infoBox{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+.textBox {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+.bild {
+    /* div class="fakeimg">Image</div> */
+    background-color: #aaa;
+    width: 100%;
+    height:200px
 }
 
 
-.menu li.burger {
-	display: none;
-}
 
 .burgericon {
-  
-  width: 35px;
-  height: 5px;
-  border-radius: 100px;
-  background-color: white;
-  margin: 6px 0;
+
+    width: 35px;
+    height: 5px;
+    border-radius: 100px;
+    background-color: white;
+    margin: 6px 0;
 }
 
+.menu li.burger {
+    display: none;
+}
+/* Menü */
+.menu{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 4;
+}
 
 .menu ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: rgba(51,51,51,0.8);
 }
 
 .menu li {
@@ -69,7 +111,7 @@ position: fixed;
 }
 
 .menu li a:hover, .menu .dropdown:hover .dropbtn {
-    background-color: limegreen;
+    background-color: rgba(40,85,40,0.8);
 }
 
 .menu li.dropdown {
@@ -102,30 +144,51 @@ position: fixed;
 }
 
 @media screen and (max-width: 600px) {
-	.menu li.burger {
-	display: block;
-}
-	
-	
-	.menu li, .menu li.dropdown  {
-		display: none;
-	}
-	.menu .burger {
-		float: left;
-		display: block;
-	}
-	.menu.responsive {
-		position: relative;
-	}
-	.menu.responsive .burger{
-		
-	}
-	.menu.responsive li {
-    float: none;
-    display: block;
-  }
-	
-	
+    .menu li.burger {
+        display: block;
+    }
+
+    .menu li, .menu li.dropdown  {
+        display: none;
+    }
+    .menu .burger {
+        float: left;
+        display: block;
+    }
+    .menu.responsive {
+        position: fixed;
+        top:0;
+        left:0;
+    }
+    .menu.responsive .burger{
+
+    }
+    .menu.responsive li {
+        float: none;
+        display: block;
+    }
+
+    .header {
+        display: none;
+    }
+
+    body {
+        top: 50px;
+        overflow: auto;
+        margin-left:15%;
+    }
+    .footer {
+        display: none;
+    }
+
+    .rechteSeite {
+        float: left;
+        width: 70%;
+        margin-left: 0;
+        margin-top: 900px;
+    }
+
+
 }
 
 
@@ -135,13 +198,23 @@ div#cookieHinweis {
     display: none;
     align-items: center;
     justify-content: center;
-    color: #555555;
-    background: #fff;
-    z-index: 350;
+    color: black;
+    background: rgba(255,255,255,0.9);
+    z-index: 999;
     border: 3px solid limegreen;
     width: 90%;
     position: fixed;
     bottom: 0;
     min-height: 8%;
-    left: +5%;
+    left: 5%;
+    border-radius: 15px
+}
+
+#okCookie{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 13px;
 }
