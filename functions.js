@@ -1,8 +1,8 @@
-function burgerMenu() {
-    var x = document.getElementById("navigation");
-    if (x.className === "menu") {
-        x.className += " responsive";
+function responsiveMenu() {
+    var a = document.getElementById("navigation");
+    if (a.className === "menu") {
+        a.className += " responsive";
     } else {
-        x.className = "menu";
+        a.className = "menu";
     }
 }
