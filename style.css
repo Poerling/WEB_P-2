@@ -188,7 +188,6 @@ footer{
 #cookieHinweis {
     display: none;
     align-items: center;
-    justify-content: center;
     color: black;
     background: rgba(229,229,229,0.9);
     z-index: 9;
