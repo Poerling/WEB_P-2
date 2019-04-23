@@ -153,6 +153,7 @@ footer{
         position: fixed;
         top:0;
         left:0;
+		font-size: 17px;
     }
     .menu.responsive .burger{
 
@@ -161,6 +162,13 @@ footer{
         float: none;
         display: block;
     }
+	
+	.menu .dropdown-inhalt{
+		display: block;
+		position: relative;
+		padding-left: 25px;
+		background-color: rgba(51,51,51,0.3);
+	}
 
     .header {
         display: none;
