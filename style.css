@@ -85,7 +85,10 @@ noscript{
     height:200px
 }
 
+.tabelle{
+    overflow-x:auto;
 
+}
 
 .burgericon {
 
@@ -216,6 +219,23 @@ noscript{
 
 
 }
+
+table{
+    border-collapse: collapse;
+    overflow-x:auto;
+
+}
+
+td, th{
+    border: 1px solid black;
+    text-align: left;
+    padding: 3px;
+}
+
+tr:nth-child(even){
+    background-color: #dddddd;
+}
+
 
 #cookieHinweis {
     display: none;
