@@ -1,11 +1,12 @@
 .kleineBilder {
-    width: 10.5%;
+    margin-top:150px;
+    width: 20%;
     height: 80%;
     overflow: auto;
-    background-color: aqua;
+    background-color: rgba(51,51,51,0.8);
     float: left;
     position: absolute;
-    z-index: 5;
+    z-index: 1;
 }
 
 .bildergallerie {
@@ -13,7 +14,7 @@
     height: 90%;
     background-color: white;
     position: center;
-    margin-left: 10%;
+    margin-left: 0%;
     margin-top: 20px;
 }
 
@@ -21,14 +22,17 @@
     width: 80px;
     height: 80px;
     margin-left: 16%;
+    margin-right: 16%;
     margin-top: 10px;
     float: left;
     z-index: 10;
 }
 
 #grossesBild{
+    margin-top:150px;
     width: 100%;
     height: 100%;
+    margin-left:13.5%;
 
 }
 
