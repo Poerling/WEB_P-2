@@ -40,6 +40,7 @@ function onload() {
         "            <a href=\"datenschutz.html\">Datenschutz</a>\n" +
         "        </div>\n" +
         "    </li>\n" +
+        "    <li><a href=\"bildergalerie.html\">Bildergalerie</a></li>\n" +
         "</ul>"
     document.getElementById("navigation").innerHTML = neu;
     istCookieGesetzt()
