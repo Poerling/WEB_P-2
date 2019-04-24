@@ -6,71 +6,24 @@
 
     <title>Minziro Entwicklungsverein e.V. </title>
 
-    <!-- Hier ID verwenden-->
-    <div class="header">
-        <h1>Social Media</h1>
-    </div>
-
     <script src="cookiebox.js"></script>
-    <script>
-        function responsiveMenu() {
-            var x = document.getElementById("navigation");
-            if (x.className === "menu") {
-                x.className += " responsive";
-            } else {
-                x.className = "menu";
-            }
-        }
-    </script>
+    <script src="functions.js"></script>
 
 </head>
-<body onload="istCookieGesetzt()">
-<nav class="menu" id="navigation">
-    <!-- Navigationsmenü -->
-    <ul>
-        <li class="burger">
-            <a href="#" onclick="responsiveMenu()">
-                <div class="burgericon"></div>
-                <div class="burgericon"></div>
-                <div class="burgericon"></div>
-            </a>
-        </li>
 
-        <li><a href="main.html">Home</a></li>
-        <!-- Navigationsmenü - Dropdown -->
-        <!-- javascript:void(0) -->
-        <li class="dropdown">
-            <a href="ueberUns.html" class="dropbtn">Über uns</a>
-            <div class="dropdown-inhalt">
-                <a href="satzung.html">Satzung</a>
-                <a href="unserVorstand.html">Unser Vorstand</a>
-            </div>
-        </li>
-        <li class="dropdown">
-            <a href="wirHelfen.html" class="dropbtn">Wir helfen</a>
-            <div class="dropdown-inhalt">
-                <a href="spenden.html">Spenden</a>
-            </div>
-        </li>
-        <li><a href="ueberMinziro.html">Über Minziro</a></li>
-        <li><a href="aktuelles.html">Aktuelles</a></li>
-        <li class="dropdown">
-            <a href="projekte.html" class="dropbtn">Projekte</a>
-            <div class="dropdown-inhalt">
-                <a href="ProjektSchulbibliothek.html">Projekt Schulbibliothek</a>
-            </div>
-        </li>
-        <li class="dropdown">
-            <a href="kontakt.html" class="dropbtn">Kontakt</a>
-            <div class="dropdown-inhalt">
-                <a href="socialmedia.html">Social Media</a>
-                <a href="impressum.html">Impressum</a>
-                <a href="datenschutz.html">Datenschutz</a>
-            </div>
-        </li>
-    </ul>
+<header>
+    <!-- Hier Header-Bild-->
+    <div class="header">
+        <img src="logo.png" alt="logo">
+    </div>
+</header>
+
+<body onload="onload()">
+<nav class="menu" id="navigation">
+    <noscript id="noscript">Sie haben JavaScript deaktiviert. Aktivieren Sie JavaScript um diese Seite in Ihrer bestmöglichen Darstellung anzeigen zu können.</br> <a href="sitemap.html">Klicken Sie hier um zur Sitemap zu gelangen</a></noscript>
 </nav>
-<div class="Inhalt">
+
+<div class="inhalt">
     <div class="linkeSeite">
         <div class="textBox">
             <p>Inhalt???</p>
@@ -79,3 +32,18 @@
 </div>
 
 </body>
+<footer>
+    <div id="cookieHinweis">
+        <p>Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erklärst du dich damit einverstanden, dass wir Cookies verwenden! <a href="datenschutz.html">Mehr Infos</a></p>
+        <button id="okCookie" onclick="setzeCookie('Minziro-Zaehler', 1, 30)">OK</button>
+
+    </div>
+
+    <div class="footer">
+        <p>©2019 - WEB PÜ2</br>
+            <a href="impressum.html">Impressum</a></p>
+    </div>
+
+
+</footer>
+</html>
