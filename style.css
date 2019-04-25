@@ -219,21 +219,22 @@ noscript{
 
 }
 
-table{
-    border-collapse: collapse;
-    overflow-x:auto;
-
-}
-
-td, th{
+table, th, td {
     border: 1px solid black;
-    text-align: left;
-    padding: 3px;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #f1f1c1;
 }
 
-tr:nth-child(even){
-    background-color: #dddddd;
+th, td {
+    padding: 15px;
+    text-align: left;
 }
+
+
+
+
+
 
 
 #cookieHinweis {
