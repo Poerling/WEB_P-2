@@ -204,7 +204,6 @@ noscript{
     body {
         top: 50px;
         overflow: auto;
-        margin-left:15%;
     }
     .footer {
         display: none;
