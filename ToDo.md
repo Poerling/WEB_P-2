@@ -1,6 +1,6 @@
 **offene Aufgaben:**
 
-[Alex] Formular "Mitglied werden" Prototypisieren
+[erledigt] Formular "Mitglied werden" Prototypisieren
 
 [erledigt] Menue verallgemeinern -> In JS umsetzen
 
