@@ -41,6 +41,7 @@ function onload() {
         "        </div>\n" +
         "    </li>\n" +
         "    <li><a href=\"bildergalerie.html\">Bildergalerie</a></li>\n" +
+        "    <li><a href=\"MitgliedWerden.html\">Mitglied werden</a></li>\n" +
         "</ul>"
     document.getElementById("navigation").innerHTML = neu;
     istCookieGesetzt()
