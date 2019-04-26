@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" lang="de-de">
@@ -26,8 +26,19 @@
 <div class="inhalt">
     <div class="linkeSeite">
         <div class="textBox">
-            <h2>Mit Paypal oder Direktüberweisung spenden</h2>
-            <p></p>
+            <h2>Mit Paypal spenden</h2>
+            <p>Über folgenden Button haben Sie die Möglichkeit über ein PayPal-Konto zu spenden. Wir weisen daruf hin, dass
+            PayPal sich eine Gebühr von 1,2% der Spende plus 0,35€ einbehält.</p>
+            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                <input type="hidden" name="cmd" value="_donations" />
+                <input type="hidden" name="business" value="" /> <!-- im Attribut value muss die email adresse eingegeben werden, die zum Spender-Konto gehört -->
+                <input type="hidden" name="currency_code" value="EUR" />
+                <input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Spenden mit dem PayPal-Button" />
+                <img alt="" src="https://www.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1" />
+            </form>
+
+            <p>Alternativ haben Sie die Möglichkeit unter <a href="wirHelfen.html">Wir Helfen</a> per Überweisung zu spenden</p>
+
         </div>
     </div>
 </div>
