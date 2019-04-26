@@ -13,9 +13,10 @@
     width: 80%;
     height: 90%;
     background-color: white;
-    position: center;
-    margin-left: 0%;
+    position: absolute;
+    margin-left: 0;
     margin-top: 20px;
+    margin-bottom: 80px;
 }
 
 .kleineBilder > a > img {
@@ -32,7 +33,7 @@
     margin-top:150px;
     width: 100%;
     height: 100%;
-    margin-left:13.5%;
+    margin-left:31%;
 
 }
 
@@ -61,7 +62,7 @@
         width: 93%;
         height: 90%;
         background-color: white;
-        position: center;
+        position: absolute;
         margin-left: 1%;
         margin-top: 1px;
     }
