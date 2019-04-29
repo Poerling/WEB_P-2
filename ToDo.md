@@ -31,3 +31,6 @@
 *[ ] Footer encoding
 
 *[ ] Design abändern -> Philipp :)
+
+*[ ] Die Elemente der Navigation aktualisiern.:smiley:
+
