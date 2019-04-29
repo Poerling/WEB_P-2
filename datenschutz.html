@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" lang="de-de">
@@ -16,7 +17,55 @@
     <div class="header">
         <img src="logo.png" alt="logo">
     </div>
+	
+	<nav class="menu" id="navigation">
+	<ul>
+        <li class="burger">
+            <a href="#" onclick="responsiveMenu()">
+                <div class="burgericon"></div>
+                <div class="burgericon"></div>
+                <div class="burgericon"></div>
+            </a>
+        </li>
+
+        <li><a href="main.html">Home</a></li>
+        <!-- Navigationsmenü - Dropdown -->
+        <!-- javascript:void(0) -->
+        <li class="dropdown">
+            <a href="ueberUns.html" class="dropbtn">Über uns</a>
+            <div class="dropdown-inhalt">
+                <a href="satzung.html">Satzung</a>
+                <a href="unserVorstand.html">Unser Vorstand</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="wirHelfen.html" class="dropbtn">Ihre Unterstützung</a>
+            <div class="dropdown-inhalt">
+                <a href="spenden.html">Spenden</a>
+            </div>
+        </li>
+        <li><a href="ueberMinziro.html">Über Minziro</a></li>
+        <li><a href="aktuelles.html">Aktuelles</a></li>
+        <li class="dropdown">
+            <a href="projekte.html" class="dropbtn">Projekte</a>
+            <div class="dropdown-inhalt">
+                <a href="ProjektSchulbibliothek.html">Projekt Schulbibliothek</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="kontakt.html" class="dropbtn">Kontakt</a>
+            <div class="dropdown-inhalt">
+                <a href="socialmedia.html">Social Media</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </li>
+    </ul>
+    
+	</nav>
+	
 </header>
+
 
 <body onload="onload()">
 <nav class="menu" id="navigation">
@@ -34,13 +83,13 @@
 </body>
 <footer>
     <div id="cookieHinweis">
-        <p>Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erklärst du dich damit einverstanden, dass wir Cookies verwenden! <a href="datenschutz.html">Mehr Infos</a></p>
+        <p>Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erkl�rst du dich damit einverstanden, dass wir Cookies verwenden! <a href="datenschutz.html">Mehr Infos</a></p>
         <button id="okCookie" onclick="setzeCookie('Minziro-Zaehler', 1, 30)">OK</button>
 
     </div>
 
     <div class="footer">
-        <p>©2019 - WEB PÜ2</br>
+        <p>�2019 - WEB P�2</br>
             <a href="impressum.html">Impressum</a></p>
     </div>
 
