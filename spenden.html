@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,7 +15,8 @@
 <header>
     <!-- Hier Header-Bild-->
     <div class="header">
-        <img src="logo.png" alt="logo">
+        <h2>Minziro Entwicklungsverein e.V.</h2>
+        <!--<img src="logo.png" alt="logo">-->
     </div>
 	
 	<nav class="menu" id="navigation">
@@ -29,22 +30,20 @@
         </li>
 
         <li><a href="main.html">Home</a></li>
-        <!-- Navigationsmenü - Dropdown -->
-        <!-- javascript:void(0) -->
         <li class="dropdown">
-            <a href="ueberUns.html" class="dropbtn">Über uns</a>
+            <a href="ueberUns.html" class="dropbtn">�ber uns</a>
             <div class="dropdown-inhalt">
                 <a href="satzung.html">Satzung</a>
                 <a href="unserVorstand.html">Unser Vorstand</a>
             </div>
         </li>
         <li class="dropdown">
-            <a href="ihreUnterstuetzung.html" class="dropbtn">Ihre Unterstützung</a>
+            <a href="ihreUnterstuetzung.html" class="dropbtn">Ihre Unterst�tzung</a>
             <div class="dropdown-inhalt">
                 <a href="spenden.html">Spenden</a>
             </div>
         </li>
-        <li><a href="ueberMinziro.html">Über Minziro</a></li>
+        <li><a href="ueberMinziro.html">�ber Minziro</a></li>
         <li><a href="aktuelles.html">Aktuelles</a></li>
         <li class="dropdown">
             <a href="projekte.html" class="dropbtn">Projekte</a>
@@ -60,6 +59,8 @@
                 <a href="datenschutz.html">Datenschutz</a>
             </div>
         </li>
+		<li><a href="bildergalerie.html">Bildergalerie</a></li>
+		<li><a href="MitgliedWerden.html">Mitglied werden</a></li>
     </ul>
     
 	</nav>
@@ -68,24 +69,22 @@
 
 
 <body onload="onload()">
-<nav class="menu" id="navigation">
-    <noscript id="noscript">Sie haben JavaScript deaktiviert. Aktivieren Sie JavaScript um diese Seite in Ihrer bestmöglichen Darstellung anzeigen zu können.</br> <a href="sitemap.html">Klicken Sie hier um zur Sitemap zu gelangen</a></noscript>
-</nav>
+
 <div class="inhalt">
     <div class="linkeSeite">
         <div class="textBox">
             <h2>Mit Paypal spenden</h2>
-            <p>Über folgenden Button haben Sie die Möglichkeit über ein PayPal-Konto zu spenden. Wir weisen daruf hin, dass
-            PayPal sich eine Gebühr von 1,2% der Spende plus 0,35€ einbehält.</p>
+            <p>?ber folgenden Button haben Sie die M?glichkeit ?ber ein PayPal-Konto zu spenden. Wir weisen daruf hin, dass
+            PayPal sich eine Geb?hr von 1,2% der Spende plus 0,35? einbeh?lt.</p>
             <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
                 <input type="hidden" name="cmd" value="_donations" />
-                <input type="hidden" name="business" value="" /> <!-- im Attribut value muss die email adresse eingegeben werden, die zum Spender-Konto gehört -->
+                <input type="hidden" name="business" value="" /> <!-- im Attribut value muss die email adresse eingegeben werden, die zum Spender-Konto geh?rt -->
                 <input type="hidden" name="currency_code" value="EUR" />
                 <input type="image" src="https://www.paypalobjects.com/de_DE/DE/i/btn/btn_donateCC_LG.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Spenden mit dem PayPal-Button" />
                 <img alt="" src="https://www.paypal.com/de_DE/i/scr/pixel.gif" width="1" height="1" />
             </form>
 
-            <p>Alternativ haben Sie die Möglichkeit unter <a href="ihreUnterstuetzung.html">Ihre Unterstützung</a> per Überweisung zu spenden</p>
+            <p>Alternativ haben Sie die M?glichkeit unter <a href="ihreUnterstuetzung.html">Ihre Unterst?tzung</a> per ?berweisung zu spenden</p>
 
         </div>
     </div>
@@ -94,13 +93,13 @@
 </body>
 <footer>
     <div id="cookieHinweis">
-        <p>Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erkl�rst du dich damit einverstanden, dass wir Cookies verwenden! <a href="datenschutz.html">Mehr Infos</a></p>
+        <p>Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erkl?rst du dich damit einverstanden, dass wir Cookies verwenden! <a href="datenschutz.html">Mehr Infos</a></p>
         <button id="okCookie" onclick="setzeCookie('Minziro-Zaehler', 1, 30)">OK</button>
 
     </div>
 
     <div class="footer">
-        <p>�2019 - WEB P�2</br>
+        <p>&copy;2019 - WEB P&Uuml;2</br>
             <a href="impressum.html">Impressum</a></p>
     </div>
 
