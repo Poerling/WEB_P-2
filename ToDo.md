@@ -18,4 +18,6 @@
 
 *[ ] Formular anpassen und Englische Seite anpassen
 
+*[ ] Bildergalerie über Minziro.
 
+*[ ] Die Elemente der Navigation aktualisiern.
