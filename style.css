@@ -41,6 +41,13 @@ noscript{
     left:0;
 }
 
+.navigation a{
+    float:left;
+    display: inline-block;
+    color:black;
+    background-color: orange;
+    padding: 5px;
+}
 
 .inhalt{
     margin-top: 150px;
