@@ -1,13 +1,13 @@
 function onload() {
-    var neu = "" +
-        "    <input type=\"checkbox\" id=\"hamburger\">" +
-		"		<label for=\"hamburger\" class=\"hamburger\">" +
+    var neu = "<ul>\n" +
+        "    <li class=\"burger\">\n" +
+        "        <a href=\"#\" onclick=\"responsiveMenu()\">\n" +
         "            <div class=\"burgericon\"></div>\n" +
         "            <div class=\"burgericon\"></div>\n" +
         "            <div class=\"burgericon\"></div>\n" +
-        "        </label>\n" +
-        "<nav class=\"topmenu\">    \n" +
-        "<ul> \n" +
+        "        </a>\n" +
+        "    </li>\n" +
+        "\n" +
         "    <li><a href=\"main.html\">Home</a></li>\n" +
         "    <!-- Navigationsmenü - Dropdown -->\n" +
         "    <!-- javascript:void(0) -->\n" +
@@ -43,8 +43,7 @@ function onload() {
         "    <li><a href=\"bildergalerie.html\">Bildergalerie</a></li>\n" +
         "    <li><a href=\"MitgliedWerden.html\">Mitglied werden</a></li>\n" +
         "    <li><a href=\"englishMainPage.html\">English page</a></li>\n" +
-        "</ul> \n" +
-		" </nav> \n"
+        "</ul>"
     document.getElementById("navigation").innerHTML = neu;
     istCookieGesetzt()
 }
