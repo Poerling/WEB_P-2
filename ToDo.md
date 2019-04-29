@@ -1,12 +1,10 @@
-#T0D0 L1ST3:
-##Deadline: 30.04-19
+#T0D0 L1ST6:
 
 *[x]  Formular "Mitglied werden" Prototypisieren
 
 *[x] Menue verallgemeinern -> In JS umsetzen
 
 *[ ] Responsive Menu (Handy, Tablet) Darstellung, muss scrollbar sein!
-    Ohne JS :(
 
 *[x] Footer nach ganz unten setzen.
 
@@ -14,23 +12,12 @@
 
 *[x] Bildergalerie erstellen mit aktuellen Bildern. //Info: Noch offen für Responsive!
 
-*[ ] Spenden realisieren. -> kleine Änderungen -> Datei umbenennen, Verlinkungen anpassen 
+*[x] Spenden realisieren.
 
-*[ ] Inhalt der Seiten :)
+*[x] Inhalt der Seiten bis 25.04.19
 
-*[ ] Mitglied werden-Formular anpassen und Englische Seite anpassen -> Alex? :)
+*[ ] Formular anpassen und Englische Seite anpassen
 
-*[ ] Die Elemente der Navigation aktualisiern -> Philipp.
-
-*[ ] Aufräumen -> Philipp 
-
-*[ ] Projekte Tabelle anpassen -> Weitenverhältnis -> Philipp
-
-*[ ] Hamburger Menü schon anzeigen, wenns zweizeitig wird 
-
-*[ ] Footer encoding
-
-*[ ] Design abändern -> Philipp :)
+*[ ] Bildergalerie über Minziro.
 
 *[ ] Die Elemente der Navigation aktualisiern.:smiley:
-
