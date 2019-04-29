@@ -1,21 +1,21 @@
-**offene Aufgaben:**
+#T0D0 L1ST6:
 
-[erledigt] Formular "Mitglied werden" Prototypisieren
+*[x]  Formular "Mitglied werden" Prototypisieren
 
-[erledigt] Menue verallgemeinern -> In JS umsetzen
+*[x] Menue verallgemeinern -> In JS umsetzen
 
-[Nils] Responsive Menu (Handy, Tablet) Darstellung, muss scrollbar sein!
+*[ ] Responsive Menu (Handy, Tablet) Darstellung, muss scrollbar sein!
 
-[erledgit] Footer nach ganz unten setzen.
+*[x] Footer nach ganz unten setzen.
 
-[Philipp] Liste der vergangenen Termine erstellen.
+*[x] Liste der vergangenen Termine erstellen.
 
-[Luca] Bildergalerie erstellen mit aktuellen Bildern. //Info: Noch offen für Responsive!
+*[x] Bildergalerie erstellen mit aktuellen Bildern. //Info: Noch offen für Responsive!
 
-[Viktor] Spenden realisieren.
+*[x] Spenden realisieren.
 
-[Michael] Inhalt der Seiten bis 25.04.19
+*[x] Inhalt der Seiten bis 25.04.19
 
-[Alex]Formular anpassen und Englische Seite anpassen
-[]
+*[ ] Formular anpassen und Englische Seite anpassen
+
 

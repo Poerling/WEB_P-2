@@ -251,6 +251,10 @@ th, td {
     text-align: left;
 }
 
+th:first-child {
+    width:20%;
+}
+
 
 
 
