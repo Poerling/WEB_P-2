@@ -1,4 +1,4 @@
-package webscript;
+package irgendeins;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -6,14 +6,15 @@ import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class filewriter {
+public class zentralverwaltung {
 	static String footer;
 	static String header;
 	static String body = "";
 	static File f = new File("");
-	static String path = f.getAbsolutePath() + "\\content";
+	static String path = f.getAbsolutePath();
 	static String firstLine;
 
+	
 	public static void main(String[] args) throws Exception {
 
 		File f = new File(path);
@@ -49,7 +50,7 @@ public class filewriter {
 						String justBody = readFile2String(listOfFiles[i].getAbsolutePath());
 						
 						//bugfix
-						justBody = justBody.substring(3);
+//						justBody = justBody.substring(3);
 						
 						FileWriter writer = new FileWriter(new File(listOfFiles[i].getAbsolutePath()));
 						writer.write(header);
@@ -122,7 +123,7 @@ public class filewriter {
 	// holt den body in einen String wenn ueber- und unterhalb head bzw. footer
 	// stehen
 	public static void getBody(String filename) throws Exception {
-                body = "";
+		body = "";
 		BufferedReader br = new BufferedReader(new FileReader(filename));
 		firstLine = br.readLine();
 		String iterateBody = "";
