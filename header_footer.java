@@ -2,9 +2,11 @@ package irgendeins;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class zentralverwaltung {
 	static String footer;
@@ -14,15 +16,12 @@ public class zentralverwaltung {
 	static String path = f.getAbsolutePath();
 	static String firstLine;
 
-	
 	public static void main(String[] args) throws Exception {
 
 		File f = new File(path);
 		File[] listOfFiles = f.listFiles();
 
 		// System.out.println(path);
-
-		
 
 		// initialisiere footer und header und erste Zeile
 		getFooter();
@@ -32,56 +31,24 @@ public class zentralverwaltung {
 
 			if (listOfFiles[i].getName().endsWith(".html")) {
 				// wenn in der dateie schon ein header und footer existieren
-				if ( (getFirstLine(listOfFiles[i].getAbsolutePath())).equals("<!DOCTYPE html>")) {
 
-					getBody(listOfFiles[i].getAbsolutePath());
-					FileWriter writer = new FileWriter(new File(listOfFiles[i].getAbsolutePath()), false);
+				getBody(listOfFiles[i].getAbsolutePath());
+				FileWriter writer = new FileWriter(new File(listOfFiles[i].getAbsolutePath()));
 
-					writer.write(header);
-					writer.append(body);
-					writer.append(footer);
-
-					writer.close();
-
-				} else { // wenn in der datei nur der body existiert
-							// header anfuegen
-					try {
-
-						String justBody = readFile2String(listOfFiles[i].getAbsolutePath());
-						
-						//bugfix
-//						justBody = justBody.substring(3);
-						
-						FileWriter writer = new FileWriter(new File(listOfFiles[i].getAbsolutePath()));
-						writer.write(header);
-						writer.append(justBody);
-						writer.close();
-
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-					// footer anfuegen
-					try {
-						FileWriter writer = new FileWriter(new File(listOfFiles[i].getAbsolutePath()), true);
-
-						writer.append(footer);
-
-						writer.close();
-
-					} catch (IOException e) {
-						// TODO Auto-generated catch block
-						e.printStackTrace();
-					}
-				}
+				writer.write(header);
+				writer.flush();
+				writer.write(body);
+				writer.flush();
+				writer.write(footer);
+				writer.flush();
+				writer.close();
 
 			}
-
 		}
 	}
 
 	static String getFirstLine(String fileName) throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader(fileName));
+		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), "UTF8"));
 		String firstLine = "";
 		firstLine = br.readLine();
 		br.close();
@@ -90,7 +57,7 @@ public class zentralverwaltung {
 
 	// schreibt gesamte Datei in einen String inklusive Zeilenumbruch
 	public static String readFile2String(String fileName) throws java.io.IOException {
-		BufferedReader br = new BufferedReader(new FileReader(fileName));
+		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), "UTF8"));
 		String fileString = "";
 		String line = "";
 		while ((line = br.readLine()) != null) {
@@ -114,6 +81,7 @@ public class zentralverwaltung {
 	public static void getHeader() {
 		try {
 			header = readFile2String(path + "\\header_footer\\header.html");
+			header = header.substring(1);
 		} catch (IOException e) {
 			System.out.println("get header exception");
 			e.printStackTrace();
@@ -124,25 +92,24 @@ public class zentralverwaltung {
 	// stehen
 	public static void getBody(String filename) throws Exception {
 		body = "";
-		BufferedReader br = new BufferedReader(new FileReader(filename));
+		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(filename), "UTF8"));
 		firstLine = br.readLine();
 		String iterateBody = "";
 		boolean collectBodyTags = false;
 
-		if (firstLine.equals("<!DOCTYPE html>")) {
-			while ((iterateBody = br.readLine()) != null) {
-				if (iterateBody.equals("<body onload=\"onload()\">")) {
-					collectBodyTags = true;
-				}
-				if (collectBodyTags) {
-					body = body + iterateBody + "\n";
-				}
-				if (iterateBody.equals("</body>")) {
-					collectBodyTags = false;
-				}
-
+		while ((iterateBody = br.readLine()) != null) {
+			if (iterateBody.equals("<body onload=\"onload()\">")) {
+				collectBodyTags = true;
 			}
+			if (collectBodyTags) {
+				body = body + iterateBody + "\n";
+			}
+			if (iterateBody.equals("</body>")) {
+				collectBodyTags = false;
+			}
+
 		}
+
 		br.close();
 	}
 
