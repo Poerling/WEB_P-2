@@ -20,7 +20,7 @@
 
 *[ ] Mitglied werden-Formular anpassen und Englische Seite anpassen -> Alex? :)
 
-*[ ] Die Elemente der Navigation aktualisiern -> Philipp.
+*[x] Die Elemente der Navigation aktualisiern -> Philipp.
 
 *[ ] Aufräumen -> Philipp 
 
@@ -28,9 +28,7 @@
 
 *[ ] Hamburger Menü schon anzeigen, wenns zweizeitig wird 
 
-*[ ] Footer encoding
+*[x] Footer encoding
 
 *[ ] Design abändern -> Philipp :)
-
-*[ ] Die Elemente der Navigation aktualisiern.:smiley:
 
