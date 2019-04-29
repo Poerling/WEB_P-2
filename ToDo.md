@@ -16,7 +16,6 @@
 
 [Michael] Inhalt der Seiten bis 25.04.19
 
-[Alex] Möglichkeit zur Umschaltung der Seite auf Englisch :) 
-
+[Alex]Formular anpassen und Englische Seite anpassen
 []
 
