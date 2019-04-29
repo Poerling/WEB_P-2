@@ -122,7 +122,6 @@ public class filewriter {
 	// holt den body in einen String wenn ueber- und unterhalb head bzw. footer
 	// stehen
 	public static void getBody(String filename) throws Exception {
-                body = "";
 		BufferedReader br = new BufferedReader(new FileReader(filename));
 		firstLine = br.readLine();
 		String iterateBody = "";
