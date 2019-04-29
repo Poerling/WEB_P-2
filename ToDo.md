@@ -20,4 +20,4 @@
 
 *[ ] Bildergalerie über Minziro.
 
-*[ ] Die Elemente der Navigation aktualisiern.:smiley:
+*[ ] Die Elemente der Navigation aktualisiern.:)
