@@ -1,18 +1,17 @@
+package irgendeins;
+
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileOutputStream;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
 
 public class zentralverwaltung {
 	static String footer;
 	static String header;
 	static String body = "";
-	static String englishSite="";
 	static File f = new File("");
 	static String path = f.getAbsolutePath();
 	static String firstLine;
@@ -22,7 +21,10 @@ public class zentralverwaltung {
 		File f = new File(path);
 		File[] listOfFiles = f.listFiles();
 
-		// initialisiere header und erste Zeile
+		// System.out.println(path);
+
+		// initialisiere footer und header und erste Zeile
+		getFooter();
 		getHeader();
 
 		for (int i = 0; i < listOfFiles.length; i++) {
@@ -31,16 +33,13 @@ public class zentralverwaltung {
 				// wenn in der dateie schon ein header und footer existieren
 
 				getBody(listOfFiles[i].getAbsolutePath());
-				Writer writer = new BufferedWriter(new OutputStreamWriter(
-						new FileOutputStream(listOfFiles[i].getAbsolutePath()), "UTF8"));
+				FileWriter writer = new FileWriter(new File(listOfFiles[i].getAbsolutePath()));
 
 				writer.write(header);
 				writer.flush();
 				writer.write(body);
 				writer.flush();
-				//writer.write(footer);
-				//writer.flush();
-				writer.write(addEnglishSiteToFooter(listOfFiles[i].getName()));
+				writer.write(footer);
 				writer.flush();
 				writer.close();
 
@@ -56,25 +55,13 @@ public class zentralverwaltung {
 		return firstLine;
 	}
 
-	public static String addEnglishSiteToFooter (String fileName) throws IOException {
-		getFooter();
-		if(footer.contains("English Version")) {
-			footer=footer.replace("englishSEITENNAME.html", "english"+fileName);
-		}
-		
-		return footer;
-	}
-	
 	// schreibt gesamte Datei in einen String inklusive Zeilenumbruch
 	public static String readFile2String(String fileName) throws java.io.IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(new FileInputStream(fileName), "UTF8"));
 		String fileString = "";
 		String line = "";
 		while ((line = br.readLine()) != null) {
-			
 			fileString = fileString + line + "\n";
-			
-	
 		}
 		br.close();
 		return fileString;

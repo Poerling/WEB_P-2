@@ -12,7 +12,7 @@ header{
     width: 100%;
     z-index: 4;
     top: 0;
-    padding-top:50px;
+    padding-top:80px;
     left:0;
 }
 input {
@@ -166,6 +166,25 @@ noscript{
     display: block;
 }
 
+@media screen and (max-width: 800px) {
+    table, th, td {
+        display: inline-block;
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #f1f1c1;
+        overflow-y: auto;
+
+    }
+
+    th:first-child{
+        display: none;
+    }
+
+
+}
+
+
 @media screen and (max-width: 600px) {
 
     #burgercheckbox{
@@ -201,7 +220,7 @@ noscript{
     }
     .navigation li{
         float: none;
-        display: block;
+        display: inline-block;
     }
     .navigation li.dropdown {
         float: none;
@@ -224,7 +243,6 @@ noscript{
         overflow: auto;
     }
     .footer {
-        display: none;
     }
 
     .inhalt{
@@ -256,7 +274,7 @@ table, th, td {
 }
 
 th, td {
-    padding: 15px;
+    padding: 5px;
     text-align: left;
 }
 
