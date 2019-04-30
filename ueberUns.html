@@ -18,24 +18,27 @@
         <h2>Minziro Entwicklungsverein e.V.</h2>
         <!--<img src="logo.png" alt="logo">-->
     </div>
-	
-	<nav class="menu" id="navigation">
-	<ul>
-        <li class="burger">
-            <a href="#" onclick="responsiveMenu()">
-                <div class="burgericon"></div>
-                <div class="burgericon"></div>
-                <div class="burgericon"></div>
-            </a>
-        </li>
 
-        <li><a href="main.html">Home</a></li>
-        <li class="dropdown">
-            <a href="ueberUns.html" class="dropbtn">Über uns</a>
-            <div class="dropdown-inhalt">
-                <a href="satzung.html">Satzung</a>
-                <a href="unserVorstand.html">Unser Vorstand</a>
-            </div>
+    <div class="navigation" id="navigation">
+
+
+        <input type="checkbox" id="burgercheckbox">
+        <label for="burgercheckbox" class="burgercheckbox">
+            <div class="burgericon"></div>
+            <div class="burgericon"></div>
+            <div class="burgericon"></div>
+        </label>
+        <nav class="menu">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <!-- Navigationsmenü - Dropdown -->
+                <!-- javascript:void(0) -->
+                <li class="dropdown">
+                    <a href="ueberUns.html" class="dropbtn">Über uns</a>
+                    <div class="dropdown-inhalt">
+                        <a href="satzung.html">Satzung</a>
+                        <a href="unserVorstand.html">Unser Vorstand</a>
+                    </div>
         </li>
         <li class="dropdown">
             <a href="ihreUnterstuetzung.html" class="dropbtn">Ihre Unterstützung</a>
@@ -103,7 +106,8 @@
 
     <div class="footer">
         <p>&copy;2019 - WEB P&Uuml;2</br>
-            <a href="impressum.html">Impressum</a></p>
+            <a href="impressum.html">Impressum</a> <a href="englishSEITENNAME.html">English Version</a> </p>
+        </p>
     </div>
 
     <div id="langVersion">
