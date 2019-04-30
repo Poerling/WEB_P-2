@@ -11,6 +11,8 @@ import java.io.Writer;
 public class zentralverwaltung {
 	static String footer;
 	static String header;
+	static String footer_en;
+	static String header_en;
 	static String body = "";
 	static String englishSite="";
 	static File f = new File("");
@@ -24,6 +26,7 @@ public class zentralverwaltung {
 
 		// initialisiere header und erste Zeile
 		getHeader();
+		getHeader_en();
 
 		for (int i = 0; i < listOfFiles.length; i++) {
 
@@ -34,6 +37,19 @@ public class zentralverwaltung {
 				Writer writer = new BufferedWriter(new OutputStreamWriter(
 						new FileOutputStream(listOfFiles[i].getAbsolutePath()), "UTF8"));
 
+				if(listOfFiles[i].getName().contains("english")) {
+					writer.write(header_en);
+					writer.flush();
+					writer.write(body);
+					writer.flush();
+					writer.write(addGermanSiteToFooter(listOfFiles[i].getName()));
+					writer.flush();
+					writer.close();
+					
+					
+				}
+				else {
+				
 				writer.write(header);
 				writer.flush();
 				writer.write(body);
@@ -43,6 +59,7 @@ public class zentralverwaltung {
 				writer.write(addEnglishSiteToFooter(listOfFiles[i].getName()));
 				writer.flush();
 				writer.close();
+				}
 
 			}
 		}
@@ -64,6 +81,16 @@ public class zentralverwaltung {
 		
 		return footer;
 	}
+	
+	public static String addGermanSiteToFooter (String fileName) throws IOException {
+		getFooter_en();
+		if(footer_en.contains("German Version")) {
+			footer_en=footer_en.replace("SEITENNAME.html", fileName.substring(7, fileName.length()));
+		}
+		
+		return footer_en;
+	}
+	
 	
 	// schreibt gesamte Datei in einen String inklusive Zeilenumbruch
 	public static String readFile2String(String fileName) throws java.io.IOException {
@@ -89,6 +116,16 @@ public class zentralverwaltung {
 			e.printStackTrace();
 		}
 	}
+	
+	public static void getFooter_en() {
+		try {
+			footer_en = readFile2String(path + "\\header_footer\\footer_en.html");
+		} catch (IOException e) {
+			System.out.println("get footer exception");
+			e.printStackTrace();
+		}
+	}
+	
 
 	// nutzt die Methode readFile2String um header.html in String zu laden
 	public static void getHeader() {
@@ -100,6 +137,17 @@ public class zentralverwaltung {
 			e.printStackTrace();
 		}
 	}
+	
+	
+	public static void getHeader_en() {
+		try {
+			header_en = readFile2String(path + "\\header_footer\\header_en.html");
+		} catch (IOException e) {
+			System.out.println("get header exception");
+			e.printStackTrace();
+		}
+	}
+	
 
 	// holt den body in einen String wenn ueber- und unterhalb head bzw. footer
 	// stehen
