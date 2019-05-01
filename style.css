@@ -106,7 +106,7 @@ noscript{
 }
 /* Menü */
 .navigation{
-    position: fixed;
+    position: absolute;
     top:0;
     left:0;
     width: 100%;
@@ -191,6 +191,8 @@ noscript{
         display:none;
     }
     .burgercheckbox{
+		position: fixed;
+		z-index: 5;
         display:block;
         margin: 10px 10px 10px 10px;
     }
@@ -208,19 +210,20 @@ noscript{
         width: 35px;
         height: 5px;
         border-radius: 100px;
-        background-color: white;
+        background-color: grey;
         margin: 6px 0;
     }
     #burgercheckbox:checked + .burgercheckbox  + nav.menu {
         max-height: 100%;
     }
     .navigation ul{
+		margin-top: 50px;
         text-align: left;
         font-weight: normal;
     }
     .navigation li{
         float: none;
-        display: inline-block;
+        display: block;
     }
     .navigation li.dropdown {
         float: none;
