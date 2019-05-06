@@ -31,8 +31,6 @@ public class zentralverwaltung {
 		for (int i = 0; i < listOfFiles.length; i++) {
 
 			if (listOfFiles[i].getName().endsWith(".html")) {
-				// wenn in der dateie schon ein header und footer existieren
-
 				getBody(listOfFiles[i].getAbsolutePath());
 				Writer writer = new BufferedWriter(new OutputStreamWriter(
 						new FileOutputStream(listOfFiles[i].getAbsolutePath()), "UTF8"));
@@ -132,6 +130,7 @@ public class zentralverwaltung {
 		try {
 			header = readFile2String(path + "\\header_footer\\header.html");
 			header = header.substring(1);
+			System.out.println(header.substring(1));
 		} catch (IOException e) {
 			System.out.println("get header exception");
 			e.printStackTrace();
