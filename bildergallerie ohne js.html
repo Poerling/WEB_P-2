@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" lang="de-de">
+    <link rel="stylesheet" href="bildergallerie ohne js.css">
+
+    <title>Minziro Entwicklungsverein e.V. </title>
+
+    <script src="cookiebox.js"></script>
+    <script src="functions.js"></script>
+    <script src="bildergalerie.js"></script>
+
+</head>
+
+<header>
+    <!-- Hier Header-Bild-->
+    <div class="header">
+        <h2>Minziro Entwicklungsverein e.V.</h2>
+        <!--<img src="logo.png" alt="logo">-->
+    </div>
+
+    <div class="navigation" id="navigation">
+
+
+        <input type="checkbox" id="burgercheckbox">
+        <label for="burgercheckbox" class="burgercheckbox">
+            <div class="burgericon"></div>
+            <div class="burgericon"></div>
+            <div class="burgericon"></div>
+        </label>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="main.html">Home</a></li>
+                <!-- Navigationsmenü - Dropdown -->
+                <!-- javascript:void(0) -->
+                <li class="dropdown">
+                    <a href="ueberUns.html" class="dropbtn">Über uns</a>
+                    <div class="dropdown-inhalt">
+                        <a href="satzung.html">Satzung</a>
+                        <a href="unserVorstand.html">Unser Vorstand</a>
+                    </div>
+        </li>
+        <li class="dropdown">
+            <a href="ihreUnterstuetzung.html" class="dropbtn">Ihre Unterstützung</a>
+            <div class="dropdown-inhalt">
+                <a href="spenden.html">Spenden</a>
+            </div>
+        </li>
+        <li><a href="ueberMinziro.html">Über Minziro</a></li>
+        <li><a href="main.html#aktuelles">Aktuelles</a></li>
+        <li class="dropdown">
+            <a href="projekte.html" class="dropbtn">Projekte</a>
+            <div class="dropdown-inhalt">
+                <a href="projektSchulbibliothek.html">Projekt Schulbibliothek</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="kontakt.html" class="dropbtn">Kontakt</a>
+            <div class="dropdown-inhalt">
+                <a href="socialmedia.html">Social Media</a>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutz</a>
+            </div>
+        </li>
+		<li><a href="bildergalerie.html">Bildergalerie</a></li>
+		<li><a href="MitgliedWerden.html">Mitglied werden</a></li>
+    </ul>
+    
+	</nav>
+    </div>
+	
+</header>
+
+
+<body onload>
+<div id="container">
+    <div id="ausgabe">
+        <ul>
+        <li><a href="#bild" tabindex="1"><img src="bildergalerie/bild1.jpg" alt="bild1" width="90" height="68" /><img id="startbild" src="bildergalerie/bild1.jpg" alt="bild1" width="388" height="290" /></a></li>
+        <li><a href="#bild" tabindex="2"><img src="bildergalerie/bild2.jpg" alt="bild2" width="90" height="68" /><img src="bildergalerie/bild2.jpg" alt="bild2" width="388" height="290" /></a></li>
+        <li><a href="#bild" tabindex="3"><img src="bildergalerie/bild3.jpg" alt="bild3" width="90" height="68" /><img src="bildergalerie/bild3.jpg" alt="bild3" width="388" height="290" /></a></li>
+        <li><a href="#bild" tabindex="4"><img src="bildergalerie/bild4.jpg" alt="bild4" width="90" height="68" /><img src="bildergalerie/bild4.jpg" alt="bild4" width="388" height="290" /></a></li>
+        <li><a href="#bild" tabindex="5"><img src="bildergalerie/bild5.jpg" alt="bild5" width="90" height="68" /><img src="bildergalerie/bild5.jpg" alt="bild5" width="388" height="290" /></a></li>
+        <li><a href="#bild" tabindex="6"><img src="bildergalerie/bild6.jpg" alt="bild6" width="90" height="68" /><img src="bildergalerie/bild6.jpg" alt="bild6" width="388" height="290" /></a></li>
+        <li><a href="#bild" tabindex="7"><img src="bildergalerie/bild7.jpg" alt="bild7" width="90" height="68" /><img src="bildergalerie/bild7.jpg" alt="bild7" width="388" height="290" /></a></li>
+        <li><a href="#bild" tabindex="8"><img src="bildergalerie/bild8.jpg" alt="bild8" width="90" height="68" /><img src="bildergalerie/bild8.jpg" alt="bild8" width="388" height="290" /></a></li>
+        <li><a href="#bild" tabindex="9"><img src="bildergalerie/bild9.jpg" alt="bild9" width="90" height="68" /><img src="bildergalerie/bild9.jpg" alt="bild9" width="388" height="290" /></a></li>
+        <li><a href="#bild" tabindex="10"><img src="bildergalerie/bild10.jpg" alt="bild10" width="90" height="68" /><img src="bildergalerie/bild10.jpg" alt="bild10" width="388" height="290" /></a></li>
+        <li><a href="#bild" tabindex="11"><img src="bildergalerie/bild11.jpg" alt="bild11" width="90" height="68" /><img src="bildergalerie/bild11.jpg" alt="bild11" width="388" height="290" /></a></li>
+        <li><a href="#bild" tabindex="12"><img src="bildergalerie/bild12.jpg" alt="bild12" width="90" height="68" /><img src="bildergalerie/bild12.jpg" alt="bild12" width="388" height="290" /></a></li>
+        <li><a href="#bild" tabindex="13"><img src="bildergalerie/bild13.jpg" alt="bild13" width="90" height="68" /><img src="bildergalerie/bild13.jpg" alt="bild13" width="388" height="290" /></a></li>
+        </ul>
+    </div>
+</div>
+
+</body>
+<footer>
+    <div id="cookieHinweis">
+        <p>Cookies erleichtern die Bereitstellung unserer Dienste. Mit der Nutzung unserer Dienste erklärst du dich damit einverstanden, dass wir Cookies verwenden! <a href="datenschutz.html">Mehr Infos</a></p>
+        <button id="okCookie" onclick="setzeCookie('Minziro-Zaehler', 1, 30)">OK</button>
+
+    </div>
+
+    <div class="footer">
+        <p>&copy;2019 - WEB P&Uuml;2</br>
+            <a href="impressum.html">Impressum</a> <a href="englishbildergalerie.html">English Version</a> </p>
+        </p>
+    </div>
+
+
+</footer>
+</html>

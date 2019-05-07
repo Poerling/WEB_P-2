@@ -1,0 +1,366 @@
+
+body {
+    font-family: Arial;
+    overflow: auto;
+    background: #f1f1f1;
+}
+header{
+    text-align: center;
+    background-color: rgba(250,250,250,0.9);
+    color: black;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    z-index: 4;
+    top: 0;
+    padding-top:80px;
+    left:0;
+}
+
+footer{
+    text-align: center;
+    background-color: rgba(51,51,51,0.8);
+    width: 100%;
+    color: white;
+    z-index: 1;
+    position: fixed;
+    bottom: 0px;
+    left:0px;
+    float: left;
+}
+
+.inhalt{
+    margin-top: 150px;
+
+}
+
+.linkeSeite {
+    position: absolute;
+    float: left;
+    width: 70%;
+
+}
+
+.linkeSeite-sitemap {
+    position: absolute;
+    width: 100%;
+    text-align: left;
+    float:left;
+
+
+}
+
+.rechteSeite {
+    position: absolute;
+    float: left;
+    width: 20%;
+    margin-left: 71%;
+
+}
+
+.infoBox{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+.textBox {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.textBox:last-child {
+    margin-bottom: 80px;
+
+}
+
+.bild {
+    /* div class="bild">Image</div> */
+    background-color: #aaa;
+    width: 100%;
+    height:200px
+}
+
+.tabelle{
+    overflow-x:auto;
+
+}
+
+#burgercheckbox, .burgercheckbox{
+    display:none;
+}
+/* Menü */
+.navigation{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    z-index: 4;
+}
+
+.navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgba(51,51,51,0.8);
+}
+
+.navigation li {
+    float: left;
+}
+
+.navigation li a, .navigation .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navigation li a:hover, .navigation .dropdown:hover .dropbtn {
+    background-color: rgba(40,85,40,0.8);
+}
+
+.navigation li.dropdown {
+    display: inline-block;
+}
+
+.navigation .dropdown-inhalt {
+    display: none;
+    position: absolute;
+    background-color: rgba(51,51,51,0.8);
+    min-width: 160px;
+    z-index: 1;
+
+}
+
+.navigation .dropdown-inhalt a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.navigation .dropdown-inhalt a:hover {
+    background-color:rgba(51,51,51,0.8);
+}
+
+.navigation .dropdown:hover .dropdown-inhalt {
+    display: block;
+}
+
+@media screen and (max-width: 800px) {
+    table, th, td {
+        display: inline-block;
+        border: 1px solid black;
+        border-collapse: collapse;
+        width: 100%;
+        background-color: #f1f1c1;
+        overflow-y: auto;
+
+    }
+
+    th:first-child{
+        display: none;
+    }
+
+
+}
+
+
+@media screen and (max-width: 600px) {
+
+    #burgercheckbox{
+        display:none;
+    }
+    .burgercheckbox{
+        display:block;
+        margin: 10px 10px 10px 10px;
+    }
+
+    .navigation{
+        background-color: rgba(51,51,51,0.8);
+        position: absolute;
+    }
+    nav.menu {
+        height: auto;
+        max-height:0;
+        overflow: hidden;
+
+    }
+    .burgericon {
+        width: 35px;
+        height: 5px;
+        border-radius: 100px;
+        background-color: white;
+        margin: 6px 0;
+    }
+    #burgercheckbox:checked + .burgercheckbox  + nav.menu {
+        max-height: 100%;
+    }
+    .navigation ul{
+        text-align: left;
+        font-weight: normal;
+    }
+    .navigation li{
+        float: none;
+        display: block;
+    }
+    .navigation li.dropdown {
+        float: none;
+        display: block;
+    }
+
+    .navigation .dropdown-inhalt{
+        display: block;
+        position: relative;
+        padding-left: 25px;
+        background-color: rgba(51,51,51,0.3);
+    }
+
+    .header {
+        display: none;
+    }
+
+    body {
+        top: 50px;
+        overflow: auto;
+    }
+    .footer {
+    }
+
+    .inhalt{
+        margin-top: 80px;
+
+    }
+
+    .linkeSeite {
+        margin-top: 280px;
+        width: 95%;
+    }
+
+    .rechteSeite{
+        position: absolute;
+        margin-left: 0;
+        width: 95%;
+        text-align: left;
+        float:left;
+    }
+}
+
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #f1f1c1;
+    overflow-y: auto;
+
+}
+
+th, td {
+    padding: 5px;
+    text-align: left;
+}
+
+th:first-child, td:first-child{
+    width: 20%;
+}
+
+#cookieHinweis {
+    display: none;
+    align-items: center;
+    color: black;
+    background: rgba(229,229,229,0.9);
+    z-index: 9;
+    border: 3px solid limegreen;
+    width: 90%;
+    position: fixed;
+    bottom: 0;
+    min-height: 8%;
+    margin-left: 5%;
+    border-radius: 15px
+}
+
+#okCookie{
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 13px;
+    margin-bottom: 5px;
+}
+
+.socialmedia{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+}
+
+.socialmedia:first-child{
+    margin-left: 0;
+}
+
+.socialmedia:last-child{
+    clear: both;
+}
+
+* {
+    margin:0;
+    padding:0;
+    list-style:none;
+    border:none;
+    outline:none;
+   }
+   
+   #ausgabe ul {
+    margin:10px;
+    position:absolute;
+    top:100px;
+    width:120px;            
+    height:400px;          
+    border:1px solid #999;
+    background:rgb(236, 233, 233);
+    overflow:auto
+   } 
+   
+   #ausgabe li {
+    float:left;
+    margin:5px;
+   }
+   
+   #ausgabe li a img + img {
+    position:absolute;
+    top:90px;
+    left:-500px;
+    width:388px;
+    border:1px solid;
+    border-color:#000 #fff #fff #000; 
+   }
+   
+   
+   #ausgabe #startbild , #ausgabe li a img:active + img , #ausgabe li a:focus img  {
+    position: fixed;
+    width: 50%;
+    height: 50%;
+    left:140px;
+    top: 120px; 
+   }
+   h1 {
+    margin:20px;
+    text-align:center;
+    font-size:100%;
+   }
+   
+   p {
+    clear:left;
+    margin:10px;
+    
+   }
+   @media screen and (max-width: 800px) {
+    #ausgabe #startbild , #ausgabe li a img:active + img , #ausgabe li a:focus img  {
+        width: 70%;
+       }
+   }
