@@ -341,7 +341,7 @@ th:first-child, td:first-child{
    }
    
    
-   #ausgabe #startbild , #ausgabe li a img:active + img , #ausgabe li a:focus img  {
+   #ausgabe #startbild , #ausgabe li a:focus img + img {
     position: fixed;
     width: 50%;
     height: 50%;
