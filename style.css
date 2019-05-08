@@ -49,6 +49,12 @@ footer{
 
 }
 
+figure {
+    display: table-cell;
+    padding: 0 4px;
+    text-align: center
+}
+
 .rechteSeite {
     position: absolute;
     float: left;
