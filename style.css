@@ -25,7 +25,6 @@ footer{
     position: fixed;
     bottom: 0px;
     left:0px;
-    float: left;
 }
 
 .inhalt{
@@ -79,10 +78,10 @@ figure {
 
 }
 
-#vorstandsbox{
-    padding-left: 10px;
-    padding-top: 300px;
-
+.copyright{
+    color:white;
+    text-decoration: none;
+    text-align: center;
 }
 
 .bild {
@@ -96,6 +95,7 @@ figure {
     overflow-x:auto;
 
 }
+
 
 #burgercheckbox, .burgercheckbox{
     display:none;
@@ -194,6 +194,7 @@ figure {
     .navigation{
         background-color: rgba(51,51,51,0.8);
         position: absolute;
+
     }
     nav.menu {
         height: auto;
@@ -210,6 +211,7 @@ figure {
     }
     #burgercheckbox:checked + .burgercheckbox  + nav.menu {
         max-height: 100%;
+
     }
     .navigation ul{
         text-align: left;
@@ -239,9 +241,15 @@ figure {
         top: 50px;
         overflow: auto;
     }
-    .footer {
-    }
 
+    .copyright{
+        color:white;
+        text-decoration: none;
+        text-align: center;
+    }
+    #minzirobild{
+        width: 75%;
+    }
     .inhalt{
         margin-top: 80px;
 
