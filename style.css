@@ -62,9 +62,7 @@ figure {
     margin-left: 71%;
 
 }
-#vorstandsbox{
-    margin: 5px;
-}
+
 .infoBox{
     background-color: white;
     padding: 20px;
@@ -78,6 +76,12 @@ figure {
 
 .textBox:last-child {
     margin-bottom: 80px;
+
+}
+
+#vorstandsbox{
+    padding-left: 10px;
+    padding-top: 300px;
 
 }
 
